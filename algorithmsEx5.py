@@ -7,5 +7,5 @@ while counter < len(numList):
     counter = counter + 1
 index = numList.index(min)
 print(min, " - ", index)
-
+#hi
 #works
