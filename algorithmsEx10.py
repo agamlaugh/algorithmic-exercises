@@ -12,7 +12,7 @@ print("Enter the y value of the second coordiante:")
 y2 = int(input())
 
 a = y1 - y2
-c = x1 - y2
+c = x1 - x2
 m = a/c
 
 b = y1 - m * x1
