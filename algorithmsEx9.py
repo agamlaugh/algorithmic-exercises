@@ -28,16 +28,18 @@ cipher3 = {
     " " : " "
 }
 
+cipher3_swap = {v: k for k, v in cipher3.items()}
+
 print("Enter a phrase to decrypt:")
 phrase = input()
 
-def decrypter(word, cipher3):
-    decryptedString = ""
+def decrypter(word, cipher3_swap):
+    decryptedString = "" 
     for x in word:
-        decryptedString = cipher3
+        decryptedString = decryptedString + cipher3_swap[x]
     print(word)
     print(decryptedString)
 
-decrypter(phrase, cipher3)
+decrypter(phrase, cipher3_swap)
 
-#cant figure out line 37
+#works!!!!
