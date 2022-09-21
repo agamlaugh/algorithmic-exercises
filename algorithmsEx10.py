@@ -20,3 +20,7 @@ b = y1 - m * x1
 print("y = ", m, "x", " + ", b)
 
 #works!!!
+
+# Very good! 
+# Please see exercise 11 from the document and continue it here!
+# GOOD LUCK! you'll need it ;)
