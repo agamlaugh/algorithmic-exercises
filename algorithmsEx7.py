@@ -6,7 +6,7 @@ counter = 0
 min = list3[counter]
 
 while len(list3)>0:
-    while counter<len(list3): #if you are running through the entire list, why use counter and not a for loop?
+    for x in list3:
         if min>list3[counter]:
             min = list3[counter]
         counter = counter + 1
