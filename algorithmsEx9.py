@@ -37,10 +37,9 @@ def decrypter(word, cipher3_swap):
     decryptedString = "" 
     for x in word:
         decryptedString = decryptedString + cipher3_swap[x]
-    print(word)
-    print(decryptedString)
+    return decryptedString
 
-decrypter(phrase, cipher3_swap)
+print(decrypter(phrase, cipher3_swap))
 
 #works!!!!
 
