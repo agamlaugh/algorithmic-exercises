@@ -32,13 +32,12 @@ print("Enter a phrase to encrypt:")
 phrase = input()
 
 # Please have the function return the encrypted string and print that value. #look at functions in the return section in w3 schools
-def encrypter(word, cipher3):
+def encrypter(phrase, cipher3):
     encryptedString = ""
-    for x in word:
+    for x in phrase:
         encryptedString = encryptedString + cipher3[x]
-    print(word)
-    print(encryptedString)
+    return encryptedString
 
-encrypter(phrase, cipher3)
+print(encrypter(phrase, cipher3))
 
 #works
