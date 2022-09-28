@@ -11,13 +11,13 @@ x2 = int(input())
 print("Enter the y value of the second coordiante:")
 y2 = int(input())
 
-a = y1 - y2
-c = x1 - x2
-m = a/c
+yDif = y1 - y2
+xDif = x1 - x2
+slope = yDif/xDif
 
-b = y1 - m * x1
+yInter = y1 - slope * x1
 
-print("y = ", m, "x", " + ", b)
+print("y = ", slope, "x", " + ", yInter)
 
 #works!!!
 
