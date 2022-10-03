@@ -1,24 +1,29 @@
-list1 = [3,6,9,3,5,1,0]
-list2 = [4,-1,-5,7,2,8,-9]
-list3 = list1 + list2
-list4 = []
-counter = 0
-min = list3[counter]
+from xml.dom.minidom import Document
 
-while len(list3)>0:
-    for x in list3:
-        if min>list3[counter]:
-            min = list3[counter]
-        counter = counter + 1
-    list4.append(min)
-    list3.remove(min)
-    counter = 0
+
+numList1 = [3,6,9,3,5,1,0]
+numList2 = [4,-1,-5,7,2,8,-9] 
+# we are joining both lists to go over in a single loop
+jointLists = numList1 + numList2
+sortedList = []
+min = jointLists[0]
+# every new minimum number that we are finding we remove from the joint list until we have an empty list
+while len(jointLists)>0:
+    #we are looping through our list and comparing it to the minimum value in search for a smaller number
+    for number in jointLists:
+        if min>number:
+            # if a smaller number is found then that is set as the new minimum
+            min = number
+    #now that we have our smallest value, remove it from jointList and add it to the sortedList. This way, we can loop through jointLists and find a new minimum value
+    sortedList.append(min)
+    jointLists.remove(min)
+    # make sure min exists and if it doesn't then continue without stopping the program
     try:
-        min = list3[counter]
+        min = jointLists[0]
     except:
         pass
 
 
-print(list4)
+print(sortedList)
 
 #IT WORKS!!!!!
