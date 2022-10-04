@@ -1,3 +1,5 @@
+
+# creat a dictionary
 cipher3 = {
     "a" : "d",
     "b" : "e",
@@ -28,14 +30,18 @@ cipher3 = {
     " " : " "
 }
 
+# swap keys and values
 cipher3_swap = {v: k for k, v in cipher3.items()}
 
 print("Enter a phrase to decrypt:")
 phrase = input()
 
+# create a function to decrypt string based on the dictionary
 def decrypter(string, cipher3_swap):
     decryptedString = "" 
+    # create a loop to go through every character and decrypt it
     for x in string:
+        # add decrypted string to list of strings
         decryptedString = decryptedString + cipher3_swap[x]
     return decryptedString
 
