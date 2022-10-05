@@ -1,23 +1,50 @@
 from re import A
 
+# create variables to represent two coordinates
 x1 = y1 = x2 = y2 = 1
 
+# have user input coordiante values. make the input values floats 
 print("Enter the x value of the first coordiante:")
-x1 = int(input())
+x1 = float(input())
 print("Enter the y value of the first coordiante:")
-y1 = int(input())
+y1 = float(input())
 print("Enter the x value of the second coordiante:")
-x2 = int(input())
+x2 = float(input())
 print("Enter the y value of the second coordiante:")
-y2 = int(input())
+y2 = float(input())
 
-yDif = y1 - y2
-xDif = x1 - x2
-slope = yDif/xDif
+# find the slope
+yDif = float(y1 - y2)
+xDif = float(x1 - x2)
+slope = float(yDif/xDif)
 
-yInter = y1 - slope * x1
+# find the y-intercept
+yInter = float(y1 - (slope * x1))
 
+# show user the equation built from both points
 print("y = ", slope, "x", " + ", yInter)
+
+
+chosenVariable = ""
+# create a loop that will end once the user doesn't input y or x for chosenVariable. The goal is to force the user to choose either x or y.
+while chosenVariable != "y" and chosenVariable != "x":
+    chosenVariable = input("Enter y or x to get its corresponding value in a coordinate: ")
+    if chosenVariable != "y" and chosenVariable != "x":
+        print("You must type y or x: ")
+
+# once x or y is selected, let the user input a value. Then calculate the coordiante and print it
+if chosenVariable == "y":
+    print("Enter y value: ")
+    y = float(input())
+    x = float((y - yInter)/slope)
+    print(x,",",y)
+if chosenVariable == "x":
+    print("Enter x value: ")
+    x = float(input())
+    y = float(slope*x + yInter)
+    print(x,",",y)
+
+
 
 #works!!!
 
