@@ -40,8 +40,12 @@ def decrypter(string, cipher3_swap):
     decryptedString = "" 
     # create a loop to go through every character and decrypt it
     for x in string:
-        # add decrypted characteer to string
-        decryptedString = decryptedString + cipher3_swap[x]
+        try:
+            # add decrypted character to string
+            decryptedString = decryptedString + cipher3_swap[x]
+        except:
+            print("The character you have typed cannot be decrypted.")
+            break
     return decryptedString
 
 print(decrypter(phrase, cipher3_swap))
