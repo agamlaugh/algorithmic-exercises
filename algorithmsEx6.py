@@ -1,12 +1,14 @@
 
 # keep inputing numbers until a string is put
-print('Enter how many values you want in your list:') 
-inputAmount = int(input())
 numList = [] 
-print(f"Enter {inputAmount} values:")
-#create a for loop to input values as much as the user previously instructed
-for numValue in range(inputAmount):
-    numList.append(input())
+print("Enter list values: ")
+# create a loop that will end/break once the input is not an integer
+while len(numList) >= 0:
+    try: 
+        numList.append(int(input()))
+    except:
+        break
+
 newList = []
 # store a variable to know when there is a duplicate number is found
 duplicateFound = False 
@@ -20,7 +22,7 @@ for numValue in numList:
         # if the value from newList and numList are equal than we update our duplicateFound variable
         if numValue == newValue:
             duplicateFound = True
-    # Once the loop runs through the entire newList, 
+    # once the loop runs through the entire newList, 
     # if no duplicate then the value in numList is added to the newList.
     if duplicateFound == False:
         newList.append(numValue)
@@ -55,3 +57,11 @@ print(newList)
 #         duplicateFound = False
 # print(newList)
 
+
+# print('Enter how many values you want in your list:') 
+# inputAmount = int(input())
+# numList = [] 
+# print(f"Enter {inputAmount} values:")
+# #create a for loop to input values as much as the user previously instructed
+# for numValue in range(inputAmount):
+#     numList.append(input())
