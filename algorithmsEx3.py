@@ -1,5 +1,6 @@
 print('Enter maximum limit:')
-# store a variable that will be the maximum limit the user inputs. make sure this input is an integer
+# store a variable that will be the maximum limit the user inputs. 
+# make sure this input is an integer
 maxLimit = int(input())
 # create a for loop to loop through all the numbers up to the maximum limit that the user chose
 for number in range(1, maxLimit):

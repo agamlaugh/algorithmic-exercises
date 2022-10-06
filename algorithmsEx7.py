@@ -1,6 +1,3 @@
-from xml.dom.minidom import Document
-
-
 numList1 = [3,6,9,3,5,1,0]
 numList2 = [4,-1,-5,7,2,8,-9] 
 # we are joining both lists to go over in a single loop
@@ -14,7 +11,8 @@ while len(jointLists)>0:
         if min>number:
             # if a smaller number is found then that is set as the new minimum
             min = number
-    #now that we have our smallest value, remove it from jointList and add it to the sortedList. This way, we can loop through jointLists and find a new minimum value
+    # now that we have our smallest value, remove it from jointList and add it to the sortedList. 
+    # This way, we can loop through jointLists and find a new minimum value
     sortedList.append(min)
     jointLists.remove(min)
     # make sure min exists and if it doesn't then continue without stopping the program

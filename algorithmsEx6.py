@@ -1,6 +1,5 @@
-from re import S
 
-
+# keep inputing numbers until a string is put
 print('Enter how many values you want in your list:') 
 inputAmount = int(input())
 numList = [] 
@@ -9,20 +8,20 @@ print(f"Enter {inputAmount} values:")
 for numValue in range(inputAmount):
     numList.append(input())
 newList = []
-# store a variable to know when there a duplicate number is found
+# store a variable to know when there is a duplicate number is found
 duplicateFound = False 
 
-#begin by adding the first value of numList to the empty list. without a value in the newlist the future for loops will not run. 
+# begin by adding the first value of numList to the empty list. 
+# without a value in the newlist the for loops will not run. 
 newList.append(numList[0])
 
-# create a loop to go through each value in numList
 for numValue in numList:
-    # create a loop to go through each value in newList
     for newValue in newList:
-        # put a conditional to check if the values from both lists are equal. if so, there is a duplicate number and the computer must be informed.
+        # if the value from newList and numList are equal than we update our duplicateFound variable
         if numValue == newValue:
             duplicateFound = True
-    # Once the loop runs through all of newList, if there wasn't a duplicate then the value in numList is added to the newList.
+    # Once the loop runs through the entire newList, 
+    # if no duplicate then the value in numList is added to the newList.
     if duplicateFound == False:
         newList.append(numValue)
     # reset our variable that stores duplicates so that the updated lists can be checked again

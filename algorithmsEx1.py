@@ -6,7 +6,8 @@ def nameInput():
 
 #call the funtion and store it under a variable
 name = nameInput()
-# create a while loop so that unless the name is exit, the user is greeted with their name input.
+# create a while loop so that unless the name is exit, 
+# the user is greeted with their name input.
 while name != 'exit':
     print('Welcome ', name)
     # the loop continues to ask for another name until condition is met

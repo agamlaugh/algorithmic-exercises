@@ -32,7 +32,8 @@ cipher3 = {
 print("Enter a phrase to encrypt:")
 phrase = input()
 
-# Please have the function return the encrypted string and print that value. #look at functions in the return section in w3 schools
+# Please have the function return the encrypted string and print that value. 
+# look at functions in the return section in w3 schools
 
 # create a function to encrypt a phrase based on the dictionary created
 def encrypter(phrase, cipher3):

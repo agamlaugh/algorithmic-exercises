@@ -4,7 +4,8 @@ counter = 0
 min = numList[counter]
 # run loop until all of numList has been checked
 while counter < len(numList):
-    # check if the current minimum value is less than the value next to it. if not, the adjacent value becomes the new minimum
+    # check if the current minimum value is less than the value next to it. 
+    # if not, the adjacent value becomes the new minimum
     if min > numList[counter]:
         min = numList[counter]
     counter = counter + 1
