@@ -34,12 +34,12 @@ if chosenVariable == "y":
     print("Enter y value: ")
     y = float(input())
     x = float((y - yInter)/slope)
-    print(x,",",y)
+    print(f"({x}, {y})")
 if chosenVariable == "x":
     print("Enter x value: ")
     x = float(input())
     y = float(slope*x + yInter)
-    print(x,",",y)
+    print(f"({x}, {y})")
 
 
 

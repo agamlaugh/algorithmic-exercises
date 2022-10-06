@@ -40,7 +40,13 @@ def encrypter(phrase, cipher3):
     encryptedString = ""
     # loop through through each character in the phrase, encrypt it, and add it to the list of strings(phrase)
     for x in phrase:
-        encryptedString = encryptedString + cipher3[x]
+        # if a character used is not in the dictionary, 
+        # inform the user that this phrase cannot be encrypted
+        try:
+            encryptedString = encryptedString + cipher3[x]
+        except:
+            print("The character you have typed cannot be encrypted.")
+            break
     # return encrypted string
     return encryptedString
 
