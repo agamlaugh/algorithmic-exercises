@@ -1,0 +1,3 @@
+<__main__.Equation object at 0x10ce7fb50> --> <function printCoordinate at 0x10ce73910>
+
+doesnt work

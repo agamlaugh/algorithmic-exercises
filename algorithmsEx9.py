@@ -48,7 +48,35 @@ def decrypter(string, cipher3_swap):
             break
     return decryptedString
 
-print(decrypter(phrase, cipher3_swap))
+decryptedString = decrypter(phrase, cipher3_swap)
+
+print(decryptedString)
+
+# print(decrypter(phrase, cipher3_swap))
+
+# send input and output history to new file
+f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx9outputs.txt", "a")
+f.write(f"{phrase} --> {decryptedString}\n")
+f.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #works!!!!
 

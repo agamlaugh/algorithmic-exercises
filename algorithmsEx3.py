@@ -22,6 +22,10 @@ maxLimit = int(input())
 # call the function
 number7Finder()
 
+# send input and output history to new file
+f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx3outputs.txt", "a")
+f.write(f"{maxLimit} --> {number7Finder()}\n")
+f.close()
 
 
 

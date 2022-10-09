@@ -1,0 +1,5 @@
+number3Checker()
+None --> None
+None --> None
+
+doesnt work

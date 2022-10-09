@@ -50,5 +50,11 @@ def encrypter(phrase, cipher3):
     # return encrypted string
     return encryptedString
 
-print(encrypter(phrase, cipher3))
+encryptedString = encrypter(phrase, cipher3)
 
+print(encryptedString)
+
+# send input and output history to new file
+f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx8outputs.txt", "a")
+f.write(f"{phrase} --> {encryptedString}\n")
+f.close()

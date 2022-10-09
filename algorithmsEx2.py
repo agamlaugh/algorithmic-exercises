@@ -15,7 +15,10 @@ def number3Checker():
 # call the function that checks for 3
 number3Checker()
 
-
+# send input and output history to new file
+f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx2outputs.txt", "a")
+f.write(f"{number3Checker()} --> {number3Checker()}\n")
+f.close()
 
 
 

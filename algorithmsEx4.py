@@ -22,3 +22,8 @@ else:
         print(rNumber, 'is a fib number')
     else:
         print(rNumber, 'is not a fib number')
+
+# send input and output history to new file
+f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx4outputs.txt", "a")
+f.write(f"{rNumber} --> {fibNumber}\n")
+f.close()

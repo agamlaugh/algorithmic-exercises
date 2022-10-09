@@ -29,7 +29,10 @@ min = jointLists[0]
 # call the function that sorts a list to sort jointLists
 listSorter(jointLists, min, sortedList)
 
-
+# send input and output history to new file
+f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx7outputs.txt", "a")
+f.write(f"{numList1} + {numList2} --> {sortedList}\n")
+f.close()
 
 
 

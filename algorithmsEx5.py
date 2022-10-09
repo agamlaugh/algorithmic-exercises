@@ -18,7 +18,10 @@ min = numList[counter]
 # call the minFinder to find the smallest number in numList
 minFinder(counter, numList, min)
 
-
+# send input and output history to new file
+f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx5outputs.txt", "a")
+f.write(f"{numList} --> {min}\n")
+f.close()
 
 
 

@@ -97,6 +97,10 @@ chosenVariable = chooseVariable()
 printCoordinate()
 
 
+# send input and output history to new file
+f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx10outputs.txt", "a")
+f.write(f"{equation} --> {printCoordinate}\n")
+f.close()
 
 
 

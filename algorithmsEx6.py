@@ -42,11 +42,10 @@ newList.append(numList[0])
 # call the function that removes duplicates and prints the list without them
 duplicateRemover(numList, newList, duplicateFound)
 
+# send input and output history to new file
 f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx6outputs.txt", "a")
 f.write(f"{numList} --> {newList}\n")
 f.close()
-
-
 
 
 
