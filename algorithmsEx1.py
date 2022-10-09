@@ -13,4 +13,3 @@ while name != 'exit':
     # the loop continues to ask for another name until condition is met
     name = nameInput() 
 
-#works

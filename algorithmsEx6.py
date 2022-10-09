@@ -1,34 +1,116 @@
+# create a function that adds input from the user to the list until a string is typed
+def listMaker(list):
+    # create a loop that will end/break once the input is not an integer
+    while len(list) >= 0:
+        try: 
+            list.append(int(input()))
+        except:
+            break
+    return list
 
-# keep inputing numbers until a string is put
+
+# create a function that checks for and removes duplicate values from a list
+def duplicateRemover(numList, newList, duplicateFound):
+    for numValue in numList:
+        for newValue in newList:
+            # if the value from newList and numList are equal than we update our duplicateFound variable
+            if numValue == newValue:
+                duplicateFound = True
+        # once the loop runs through the entire newList, 
+        # if no duplicate is found then the value in numList is added to the newList
+        if duplicateFound == False:
+            newList.append(numValue)
+        # reset our variable that stores duplicates so that the updated lists can be checked again
+        duplicateFound = False
+    print(newList)
+
+
 numList = [] 
 print("Enter list values: ")
-# create a loop that will end/break once the input is not an integer
-while len(numList) >= 0:
-    try: 
-        numList.append(int(input()))
-    except:
-        break
+
+# call the listMaker function and store it under numList
+numList = listMaker(numList)
 
 newList = []
 # store a variable to know when there is a duplicate number is found
 duplicateFound = False 
 
-# begin by adding the first value of numList to the empty list. 
-# without a value in the newlist the for loops will not run. 
+# add the first value of numList to the empty list
+# without a value in the newlist the loops will not run 
 newList.append(numList[0])
 
-for numValue in numList:
-    for newValue in newList:
-        # if the value from newList and numList are equal than we update our duplicateFound variable
-        if numValue == newValue:
-            duplicateFound = True
-    # once the loop runs through the entire newList, 
-    # if no duplicate then the value in numList is added to the newList.
-    if duplicateFound == False:
-        newList.append(numValue)
-    # reset our variable that stores duplicates so that the updated lists can be checked again
-    duplicateFound = False
-print(newList)
+# call the function that removes duplicates and prints the list without them
+duplicateRemover(numList, newList, duplicateFound)
+
+f = open("/Users/meytallitmanovitz/coding/algorithmic-exercises/algorithmsEx6outputs.txt", "a")
+f.write(f"{numList} --> {newList}\n")
+f.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # keep inputing numbers until a string is put
+# numList = [] 
+# print("Enter list values: ")
+# # create a loop that will end/break once the input is not an integer
+# while len(numList) >= 0:
+#     try: 
+#         numList.append(int(input()))
+#     except:
+#         break
+
+# newList = []
+# # store a variable to know when there is a duplicate number is found
+# duplicateFound = False 
+
+# # begin by adding the first value of numList to the empty list. 
+# # without a value in the newlist the for loops will not run. 
+# newList.append(numList[0])
+
+# for numValue in numList:
+#     for newValue in newList:
+#         # if the value from newList and numList are equal than we update our duplicateFound variable
+#         if numValue == newValue:
+#             duplicateFound = True
+#     # once the loop runs through the entire newList, 
+#     # if no duplicate then the value in numList is added to the newList.
+#     if duplicateFound == False:
+#         newList.append(numValue)
+#     # reset our variable that stores duplicates so that the updated lists can be checked again
+#     duplicateFound = False
+# print(newList)
 
 
 

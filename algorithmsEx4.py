@@ -22,5 +22,3 @@ else:
         print(rNumber, 'is a fib number')
     else:
         print(rNumber, 'is not a fib number')
-
-#works
