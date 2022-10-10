@@ -15,9 +15,20 @@ def number7Finder():
 
 
 print('Enter maximum limit:')
-# store a variable that will be the maximum limit the user inputs. 
-# make sure this input is an integer
-maxLimit = int(input())
+
+# set a variable in order to create a loop that will prevent any code errors
+dataValidation = 0
+
+# if the user input is not an integer then this loop will continue until it is
+while dataValidation == 0:
+    try:
+        # store a variable that will be the maximum limit the user inputs. 
+        # make sure this input is an integer
+        maxLimit = int(input())
+        # leave loop once input is successful. I think "dataValidation = 1" could also work.
+        break 
+    except:
+        print("you must enter an integer")
 
 # call the function
 number7Finder()

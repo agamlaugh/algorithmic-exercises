@@ -2,4 +2,5 @@ number3Checker()
 None --> None
 None --> None
 
-doesnt work
+doesnt workNone --> None
+None --> None

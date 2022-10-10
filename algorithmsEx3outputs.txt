@@ -1,4 +1,8 @@
 
 20 --> None
 
-doesnt work
+doesnt work4 --> None
+20 --> None
+16 --> None
+5 --> None
+15 --> None
