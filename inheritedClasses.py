@@ -32,3 +32,42 @@ class Student(Person):
 
 y = Student("Agam", "Cohen", 17, 5.3, "brown", "brown", "Agoura High School", "12th", "4.0")
 y.greet()
+
+class Whale:
+    def __init__(self, type, size, weight):
+        self.type = type
+        self.size = size
+        self.weight = weight
+    def whaleNoise(self):
+        print("OoooooOOO")
+    def description(self):
+        print(f"Whales are a {self.size} animal. These {self.type} weigh between {self.weight}.")
+
+z = Whale("mammal", "large", "600lbs to 200tons")
+z.whaleNoise()
+z.description()
+
+class BlueWhale(Whale):
+    def __init__(self, type, size, weight, amountleft, dangerlevel):
+        super().__init__(type, size, weight)
+        self.amountleft = amountleft
+        self.dangerlevel = dangerlevel
+    def description(self):
+        print(f"Blue Whales are a(n) {self.size} {self.type} that weigh between {self.weight}. There are only {self.amountleft} left and they are {self.dangerlevel} dangerous.")
+
+w = BlueWhale("mammal", "enormous", "290,000 to 330,000 pounds", 25000, "not")
+w.description()
+
+
+
+
+
+
+
+
+# ideas
+# phone(size, color, shape, weight, brand)
+# ihpone(model, feature,)
+
+# computer(size, color, s)
+# phone
